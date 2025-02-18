@@ -1,0 +1,42 @@
+``` java
+public class Student_test {
+	String studName;
+	private static int sCardNum = 1000; // 학생 instance 생성시 100씩 증가
+	int sRnum;
+	
+	public Student_test() {}
+	public Student_test(String studName) {
+		sCardNum += 100; //해당 constructor로 학생 인스턴스 생성시 sCardNum 값을 100증가 시킨다
+		this.studName = studName;
+		sRnum = sCardNum;
+	}
+	
+	public static int getStudCardNum() {
+		return sCardNum;
+	}
+	
+	public static void setStudCardNum(int sCardNum) { //로컬변수, 클래스 변수만 사용가능
+		Student_test.sCardNum = sCardNum; // this 예약어 사용 불가, this는 생성된 instance를 가르키는데 static 변수 즉 클래스 변수는 프로그램 실행 후 메모리에 자리 잡고 있기떄문.
+	}
+	
+}
+```
+
+``` java
+public class StudentTestEx {
+
+	public static void main(String[] args) {
+		Student_test studkim = new Student_test("Kim Banana");
+		Student_test studlee = new Student_test("Lee Apple");
+		
+		System.out.println(Student_test.getStudCardNum()); // 출력 값은 1200, 두개의 instance 생성 했기 때문
+		// Static 변수, 메소드는 호출시 클래스 이름으로 호출하기
+		System.out.println(studkim.sRnum);
+		System.out.println("학생 이름 => "+studkim.studName+"\t"+"학생카드 번호 => "+studkim.sRnum);
+		
+		System.out.println(studlee.sRnum);
+		System.out.println("학생 이름 => "+studlee.studName+"\t"+"학생카드 번호 => "+studlee.sRnum);
+	}
+
+}
+```
