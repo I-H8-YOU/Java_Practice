@@ -32,12 +32,12 @@ public class CalTest {
 //		System.out.println("최대값 => " + Arrays.stream(nArr).max().getAsInt());
 //		sc.close();
 		// 5번
-//		for (int i = 1; i <= 10; i++) {
-//			for (int k = 1; k <= 10; k++) {
-//				System.out.print(k - 1 + i + "\t");
-//			}
-//			System.out.println();
-//		}
+		for (int i = 1; i <= 10; i++) {
+			for (int k = 1; k <= 10; k++) {
+				System.out.print(k - 1 + i + "\t");
+			}
+			System.out.println();
+		}
 
 		// 6번
 		//		Scanner sc = new Scanner(System.in);
