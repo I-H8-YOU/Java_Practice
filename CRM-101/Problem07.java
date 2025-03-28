@@ -1,7 +1,7 @@
 import java.util.stream.IntStream;
 import java.util.*;
 
-public class CalTest {
+public class Problem07 {
 
 	public static void main(String[] args) {
     		try (Scanner sc = new Scanner(System.in)) {
