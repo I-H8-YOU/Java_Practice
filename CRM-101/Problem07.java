@@ -11,7 +11,7 @@ public class Problem07 {
 				System.out.println("========================");
 				System.out.println("======숫자 맞추기 게임=====");
 				System.out.println("========================");
-				System.out.println(ranNum);
+				//System.out.println(ranNum);
 				Internal: for (;;) {
 					System.out.print(">> ");
 					strNum = sc.nextLine();
