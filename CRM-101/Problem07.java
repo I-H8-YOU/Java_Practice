@@ -4,14 +4,14 @@ import java.util.*;
 public class Problem07 {
 
 	public static void main(String[] args) {
-    		try (Scanner sc = new Scanner(System.in)) {
+    				try (Scanner sc = new Scanner(System.in)) {
 			String strNum = "";
 			External: for (;;) {
 				int ranNum = (int) ((Math.random() * 100) + 1);
 				System.out.println("========================");
-				System.out.println("======숫자 맞추기 게임=====");
+				System.out.println("   [숫자 맞추기 게임 시작]");
 				System.out.println("========================");
-				//System.out.println(ranNum);
+				System.out.println(ranNum);
 				Internal: for (;;) {
 					System.out.print(">> ");
 					strNum = sc.nextLine();
@@ -36,6 +36,8 @@ public class Problem07 {
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		}
-		System.out.println("게임 종료");
+		System.out.println("========================");
+		System.out.println("   [숫자 맞추기 게임 종료]");
+		System.out.println("========================");
     }
 }
