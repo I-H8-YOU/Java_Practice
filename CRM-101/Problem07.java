@@ -41,7 +41,7 @@ public class Problem07 {
 				}
 			}
 			
-		} catch (NumberFormatException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		System.out.println("========================");
