@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      th,
+      td {
+        text-align: center;
+        border: 1px solid black;
+        margin: 15px;
+        padding: 10px;
+      }
+      th {
+        background-color: yellow;
+      }
+      td :hover {
+        background-color: aqua;
+      }
+    </style>
+    <script>
+      const arr = [];
+      let cnt = 0;
+      while (cnt != 3) {
+        let name = prompt("이름을 입력해주세요", "");
+        let score = parseInt(prompt("점수를 입력해주세요"), "");
+        arr.push({ name, score });
+        cnt++;
+      }
+      let sum = 0;
+      arr.forEach((student) => {
+        sum += student.score;
+      });
+      let avg = sum / arr.length;
+      const sorted = [...arr].sort((a, b) => b.score - a.score);
+      document.writeln(`평균 : ${avg}  총점 : ${sum}<br>
+      <br><table>
+        <tr>
+            <th>등수</th>
+            <th>이름</th>
+            <th>점수</th>
+        </tr>
+        <tr>
+        <td>1등</td>
+        <td>${sorted[0].name}</td>
+        <td>${sorted[0].score}</td>
+        </tr>
+         <tr>
+        <td>2등</td>
+        <td>${sorted[1].name}</td>
+        <td>${sorted[1].score}</td>
+        </tr>
+        <tr>
+        <td>3등</td>
+        <td>${sorted[2].name}</td>
+        <td>${sorted[2].score}</td>
+        </tr>   `);
+    </script>
+  </head>
+  <body></body>
+</html>
