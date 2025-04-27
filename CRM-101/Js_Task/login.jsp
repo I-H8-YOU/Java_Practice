@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+//fetch json으로 해보기 form말고
 <!DOCTYPE html>
 <html>
 <head>
